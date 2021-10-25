@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!--<link rel="stylesheet" href="./assets/css/higlighting.css" />-->
+	  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+	 crossorigin='anonymous'>
+    <script src="./assets/js/functions.js"></script>
+    <!--<link rel="stylesheet" href="./assets/css/prism.css" data-noprefix />-->
+    <!--<script src="./assets/js/prism.js"></script>-->
+    <!--<script src="./assets/js/highlight.min.js"></script>
+    <script type="text/javascript">
+      document.querySelectorAll('textarea').forEach(el => {
+        // then highlight each
+        hljs.highlightElement(el);
+      });
+    </script>-->
+    <title>Griphitor</title>
+    <!-- Loading animation -->
+    <link rel='stylesheet' href='./assets/css/loading.css' type='text/css'>
+    <div class='loader'>
+      <center>
+        <img src="https://media4.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading..." />
+        <p id="LoadingText" style="color: black;">Loading</p>
+      </center>
+    </div>
+    <script>
+    //var Loadingtext = document.getElementById("LoadingText")
+    //window.addEventListener('load', function () {
+      //setTimeout(function () {
+        //Loadingtext.innerHTML = "Loading Complete!"
+        const loader = document.querySelector('.loader');
+        loader.className += ' hidden'; // class 'loader hidden'
+      //}, 1500);
+    //});
+    </script>
+  </head>
+  <body id="body" style="margin:0; overflow-x: hidden;" class="dark">
+    <ul class="navbar">
+      <li><a class="active" id="RunCodeBtn">Run <i class="fa fa-play"></i></a></li>
+      <li><a id="DownldBtn" class="DwnldBtn">Export <i class="fa fa-file-export"></i></a></li>
+      <li><a id="OpenBtn" class="OpenBtn">Open <i class="fa fa-folder-open"></i></a></li>
+      <!--<li class="rightli" style="float:right"><a href="javascript:void(0)">About</a></li>
+      <li class="rightli" style="float:right">
+        <label class="switch2" style="top:5px;">
+          <input type="checkbox" id="drkmdbtn">
+          <span class="slider round"></span>
+        </label>
+      </li>-->
+    </ul>
+    <div id="alert" class="alert" style="display: none;">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <strong><h3 id="alerttitle" class="text-left"></h3></strong>
+      <p id="alertmessage" class="text-left"></p>
+    </div>
+    <br>
+    <div>
+      <textarea id="html" placeholder="HTML" class="dark"></textarea>
+      <textarea id="css" placeholder="CSS" class="dark"></textarea>
+      <textarea id="js" placeholder="JavaScript" class="dark"></textarea>
+      <iframe id="code" title="CodeView" width="100%" height="100%" style="width: 98%;" src="./assets/internal/info-iframe.html"></iframe>
+      <script type="text/javascript" src="./assets/js/app.js"></script>
+    </div>
+  </body>
+  <!--<script src="./assets/js/switch.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./assets/lib/FileSaver.js"></script>
+  <script src="./assets/js/settings.js"></script>
+</html>

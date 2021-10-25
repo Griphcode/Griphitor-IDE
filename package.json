@@ -1,0 +1,66 @@
+{
+  "name": "spotify-desktop",
+  "version": "1.2.3",
+  "description": "An unofficial desktop app for Spotify",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist-mac": "electron-builder --prepackaged='dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oxmc/spotify-desktop"
+  },
+  "keywords": [
+    "Electron",
+    "Spotify-Desktop"
+  ],
+  "author": {
+    "name": "oxmc",
+    "email": " oxmc7769@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron-builder": "^22.11.7"
+  },
+  "dependencies": {
+    "decompress": "^4.2.1",
+    "electron": "^15.3.0",
+    "electron-window-state": "^5.0.3",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "minify": "^8.0.3",
+    "node-notifier": "^10.0.0",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "rimraf": "^3.0.2",
+    "v8-compile-cache": "^2.3.0"
+  },
+  "build": {
+    "appId": "com.oxmc.github.spotifyDesktop",
+    "productName": "Spotify Desktop",
+    "mac": {
+      "icon": "src/renderer/assets/app.icns",
+      "category": "Network"
+    },
+    "linux": {
+      "target": [
+        "appimage",
+        "deb"
+      ],
+      "icon": "src/renderer/assets/app.png",
+      "category": "Network"
+    },
+    "protocols": [
+      {
+        "name": "snorain",
+        "schemes": [
+          "snorain"
+        ]
+      }
+    ]
+  }
+}

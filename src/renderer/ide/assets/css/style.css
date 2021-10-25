@@ -1,0 +1,275 @@
+body {
+  text-align: center;
+}
+
+textarea {
+  width: 32%;
+  float: top;
+  min-height: 250px;
+  overflow: scroll;
+  margin: auto;
+  display: inline-block;
+  background: #f4f4f9;
+  outline: none;
+  font-family: Courier, sans-serif;
+  font-size: 14px;
+  resize: none;
+}
+
+.nexttotextarea {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #555;
+  border-radius: 1.25rem;
+  width: 3.125rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.1875rem;
+  margin-left: 0.3125rem;
+}
+
+iframe {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  height: 35em;
+}
+
+/*Dark mode*/
+.dark {
+  background-color: #222;
+  color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+/*Switch*/
+.switch {
+    align-self: flex-end;
+    margin: 0.9375rem;
+}
+.inner-switch {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #555;
+    border-radius: 1.25rem;
+    width: 3.125rem;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.1875rem;
+    margin-left: 0.3125rem;
+}
+
+.switch2 {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch2 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*Animations*/
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+/*Buttons*/
+.runbtn {
+  background-color: #1DB954;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  /*border-radius: 10px;
+  box-shadow: 0 6px #999;*/
+}
+
+.runbtn:active {
+  /*box-shadow: 0 5px #666;*/
+  transform: translateY(2px);
+}
+
+.DwnldBtn {
+  background-color: #008CBA;
+}
+
+.OpenBtn {
+  background-color: #467c91;
+}
+
+.inline {
+  margin: 0; display: inline-block; top: 6px; position: relative;
+}
+
+.controls {
+  margin: 0;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+}
+
+/*Notification boxes*/
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.text-left {
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+  width: 100%;
+  color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+li {
+  float: left;
+}
+
+li a,
+li button {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width:12px;
+  background-color:#cccccc;
+  overflow: auto;
+}
+::-webkit-scrollbar-thumb {
+  background-color:#5e5b5b;
+  border:1px solid #000000;
+  border-radius:16px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color:#5e5b5b;
+  border:1px solid #333333;
+}
+::-webkit-scrollbar-track{
+  background: #ffffff;
+  border-radius: 10px;
+  background-color: #333333;
+}

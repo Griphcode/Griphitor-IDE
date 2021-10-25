@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/index.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <!--<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
+  --><!--<link href='https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+  <link href='https://getbootstrap.com/docs/5.0/examples/headers/headers.css' rel='stylesheet'>-->
+</head>
+<body>
+  <center>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;display:block;" width="150px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+      <circle cx="50" cy="50" r="30" stroke="#1DB954" stroke-width="10" fill="none"></circle>
+      <circle cx="50" cy="50" r="30" stroke="#191414" stroke-width="8" stroke-linecap="round" fill="none">
+        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"></animateTransform>
+        <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1s" values="18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882" keyTimes="0;0.5;1"></animate>
+      </circle>
+    </svg>
+    <p class="green" id="progress-text">Checking for updates...</p>
+    <!-- style="display: none;" -->
+    <div id="progbardiv" style="display: none;" class="progress">
+      <div id="progbar" class="progress-bar" role="progressbar" >0%</div>
+    </div>
+    <p class="green" id="download-progress-text"></p>
+    <br>
+    <script>
+      const { ipcRenderer, ipcMain } = require('electron')
+      var packageJson = require(`${__dirname}/../../package.json`)
+      var appname = packageJson.name;
+      var os = require('os');
+      var config = require('../main/config.json');
+      const path = require('path');
+      const { parse } = require('url')
+      const request = require('request')
+      const fs = require('fs');
+      var rimraf = require("rimraf");
+      const decompress = require("decompress");
+
+      /*Elements*/
+      var progressText = document.getElementById("progress-text");
+      var downloadProgressText = document.getElementById("download-progress-text");
+      var progbar = document.getElementById("progbar");
+      var progbarText = document.getElementById("progbar-text");
+
+      /*Check for updates*/
+      ipcRenderer.on('SplashWindow', (event, arg) => {
+        //console.log(arg);
+        if (arg == "Latest") {
+          progressText.innerHTML = "Loading..."
+          setTimeout(async function () {
+            ipcRenderer.send('FromSplashWindow', 'ShowMainWindow');
+          }, 2000)
+        } else if (arg == "Update") {
+          progressText.innerHTML = "Downloading updates..."
+          var appfile;
+          if (os.platform() == "win32") {
+            appfile = `${appname}.exe`;
+          } else if (os.platform() == "darwin") {
+            appfile = `${appname}.app`;
+          } else if (os.platform() == "linux") {
+            appfile = `${appname}.appimage`;
+          };
+          console.log("Downloading latest version...");
+          progressText.innerHTML = 'Downloading files...';
+      	  console.log(`OS type is: ${os.platform()}`);
+      	  console.log(`Downloading '${appfile}' from '${config.Latest}'`);
+          var received_bytes = 0;
+          var total_bytes = 0;
+          var downloaded = 0;
+          var outStream = fs.createWriteStream(appfile);
+          request.get(config.Latest).on('error', function(err) {
+            console.log(err);
+          }).on('response', function(data) {
+            total_bytes = parseInt(data.headers['content-length']);
+          }).on('data', function(chunk) {
+            progbardiv.style.display = "block";
+            received_bytes += chunk.length;
+            var percentage = ((received_bytes * 100) / total_bytes).toFixed(2).split('.')[0].trim();
+            //console.log(percentage.split('.')[0].trim());
+            downloadProgressText.innerHTML = `${percentage}% of ${received_bytes} bytes downloaded out of ${total_bytes} bytes.`
+            progbar.style = `width: ${percentage}%;`;
+            progbar.innerHTML = `${percentage}%`;
+            if (percentage == "100") {
+              console.log("Successfully downloaded new update!");
+              progressText.innerHTML = 'Download Complete!';
+              setTimeout(async function () {
+                progressText.innerHTML = 'Restarting...';
+                ipcRenderer.send('FromSplashWindow', 'Restart');
+              }, 2000)
+            }
+          }).pipe(outStream);
+        } else if (arg == "Unknown") {
+          progressText.innerHTML = "Unable to get latest version"
+          downloadProgressText.innerHTML = "Loading..."
+          setTimeout(function(){
+            ipcRenderer.send('FromSplashWindow', 'ShowMainWindow');
+          }, 3000);
+        }
+      })
+    </script>
+  </center>
+</body>
+</html>

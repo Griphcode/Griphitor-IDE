@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #232b2b;
+  user-select: none;
+}
+
+.green {
+  color: #1DB954;
+}
+
+.titlebar {
+  height: 40px;
+  width: 100%;
+  -webkit-app-region: drag;
+  display: flex;
+}
+
+.titlebar .title {
+  flex: 1 1 100%;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.titlebar .controls {
+  display: flex;
+}
+
+.titlebar button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  -webkit-app-region: no-drag;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlebarbutton:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.closebutton:hover {
+  background-color: rgb(255, 53, 71, 0.6);
+}
+
+.titlebar button img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+
+.titlebar button:hover img {
+  opacity: 1;
+}
+
+/* Progess bar code from bootstrap */
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0
+  } to {
+    background-position: 0 0
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0
+  } to {
+    background-position: 0 0
+  }
+}
+
+.progress {
+  display: -ms-flexbox;
+  display:flex;
+  height:1rem;
+  overflow:hidden;
+  font-size:.75rem;
+  background-color:#e9ecef;
+  border-radius: .25rem
+}
+
+.progress-bar {
+  display: -ms-flexbox;
+  display:flex;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  -ms-flex-pack:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#fff;
+  text-align:center;
+  white-space:nowrap;
+  background-color:#007bff;
+  transition:width .6s ease
+}
+
+@media (
+  prefers-reduced-motion:reduce
+){
+  .progress-bar{
+    transition:none
+  }
+}
+
+.progress-bar-striped {
+  background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-size:1rem 1rem
+}
+
+.progress-bar-animated {
+  -webkit-animation:progress-bar-stripes 1s linear infinite;
+  animation:progress-bar-stripes 1s linear infinite
+}
+
+@media (
+  prefers-reduced-motion:reduce
+){
+  .progress-bar-animated {
+    -webkit-animation:none;
+    animation:none
+  }
+}
