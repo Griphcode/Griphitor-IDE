@@ -1,4 +1,3 @@
-const homeButton = document.getElementById("home");
 const minimizeButton = document.getElementById("minimize");
 const maximizeButton = document.getElementById("maximize");
 const restoreButton = document.getElementById("restore");
@@ -6,9 +5,6 @@ const closeButton = document.getElementById("close");
 
 restoreButton.style.display = "none";
 
-homeButton.addEventListener("click", () => {
-  ipc.send("window.home");
-});
 minimizeButton.addEventListener("click", () => {
   ipc.send("window.minimize");
 });

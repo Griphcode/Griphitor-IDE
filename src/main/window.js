@@ -49,8 +49,8 @@ function createMainWindow() {
   mainWindow.hide();
   const PageView = (global.PageView = new BrowserView({
     webPreferences: {
-      plugins: true,
-      preload: `${appdir}/src/renderer/preload-2.js`,
+      nodeIntegration: true,
+      contextIsolation: false
     },
   }));
   mainWindow.setBrowserView(PageView);

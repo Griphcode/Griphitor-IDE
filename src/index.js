@@ -5,7 +5,7 @@ const path = require("path");
 const request = require("request");
 const notifier = require('node-notifier');
 const exec = require('child_process').exec;
-//require('v8-compile-cache');
+require('v8-compile-cache');
 
 /* Info about app */
 var appdir = app.getAppPath();
@@ -163,7 +163,7 @@ if (appYear == currentYear){
 const createTray = () => {
   var creditText = stringContributors
   var trayMenuTemplate = [
-    { label: "Spotify-Desktop", enabled: false },
+    { label: appname, enabled: false },
     { type: 'separator' },
 	  { label: "Open source on github!", enabled: false},
     { type: 'separator' },
@@ -191,8 +191,8 @@ app.whenReady().then(async () => {
   createMainWindow();
   createTray();
   /* Custom URI handler for linux and windows */
-  app.setAsDefaultProtocolClient("snorain");
-  protocol.registerHttpProtocol('snorain', (req, cb) => {
+  app.setAsDefaultProtocolClient("griph");
+  protocol.registerHttpProtocol('griph', (req, cb) => {
     const url = req.url.substr(10)
     var data = new Array ();
     let str2 = url.replace(":", " ");
@@ -283,6 +283,19 @@ app.whenReady().then(async () => {
             PageView.webContents.executeJavaScript(fs.readFileSync(`${appdir}/src/renderer/preload-2.js`).toString(), true);
           })
           mainWindow.center();
+        }
+      })
+      ipcMain.on('Editor', function (event, arg) {
+        //console.log(arg);
+        if (arg == "ShowCode") {
+          const CodeWin  = new BrowserWindow({
+            title: "Your code",
+            webPreferences: {
+              nodeIntegration: true,
+              contextIsolation: false
+            },
+          });
+          CodeWin.webContents.loadFile(`${appdir}/src/renderer/ide/user-created.html`);
         }
       })
     } else {

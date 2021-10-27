@@ -1,20 +1,22 @@
 {
-  "name": "spotify-desktop",
+  "name": "griphitor-desktop",
   "version": "1.2.3",
-  "description": "An unofficial desktop app for Spotify",
+  "description": "The Griphitor Desktop app.",
   "main": "./src/index.js",
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist-mac": "electron-builder --prepackaged='dist/"
+    "dist-mac": "electron-builder --prepackaged='dist/mac",
+    "dist-win": "electron-builder --prepackaged='dist/win",
+    "dist-linux": "electron-builder --prepackaged='dist/linux"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oxmc/spotify-desktop"
+    "url": "https://github.com/Griphcode/Griphitor"
   },
   "keywords": [
     "Electron",
-    "Spotify-Desktop"
+    "Griphitor"
   ],
   "author": {
     "name": "oxmc",
@@ -40,8 +42,8 @@
     "v8-compile-cache": "^2.3.0"
   },
   "build": {
-    "appId": "com.oxmc.github.spotifyDesktop",
-    "productName": "Spotify Desktop",
+    "appId": "com.oxmc.github.GriphitorDesktop",
+    "productName": "Griphitor Desktop",
     "mac": {
       "icon": "src/renderer/assets/app.icns",
       "category": "Network"
@@ -56,9 +58,9 @@
     },
     "protocols": [
       {
-        "name": "snorain",
+        "name": "Griph",
         "schemes": [
-          "snorain"
+          "Griph"
         ]
       }
     ]
