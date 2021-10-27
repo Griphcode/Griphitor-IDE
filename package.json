@@ -6,9 +6,9 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist-mac": "electron-builder --prepackaged='dist/mac",
-    "dist-win": "electron-builder --prepackaged='dist/win",
-    "dist-linux": "electron-builder --prepackaged='dist/linux"
+    "dist-mac": "electron-builder --prepackaged=dist/mac-unpacked",
+    "dist-win": "electron-builder --prepackaged=dist/win-unpacked",
+    "dist-linux": "electron-builder --prepackaged=dist/linux-unpacked"
   },
   "repository": {
     "type": "git",
@@ -24,11 +24,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "electron-builder": "^22.11.7"
+    "electron-builder": "^22.11.7",
+    "electron": "^15.3.0"
   },
   "dependencies": {
     "decompress": "^4.2.1",
-    "electron": "^15.3.0",
     "electron-window-state": "^5.0.3",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
