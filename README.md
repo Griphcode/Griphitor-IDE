@@ -1,4 +1,4 @@
-# Griphitor Desktop.
+# Griphitor Desktop
 
 **The official desktop application for Griphitor built with electron.**
 
@@ -8,7 +8,7 @@
 
 Fast load times,
 
-Export as zip, json, or indivisual files
+Export as .zip, .json, or individual files
 
 Global shortcuts:
 
@@ -20,9 +20,9 @@ Global shortcuts:
 ## Todo
 
 - [ ] Add code highlight.
-- [ ] Add obility to open files to edit.
-- [ ] Better ui
-- [ ] run code without errors
+- [ ] Add ability to open files to edit.
+- [ ] Better UI.
+- [ ] Run code without errors.
 
 ## Installation
 
