@@ -21,6 +21,8 @@ Global shortcuts:
 
 - [ ] Add code highlight.
 - [ ] Add obility to open files to edit.
+- [ ] Better ui
+- [ ] run code without errors
 
 ## Installation
 
