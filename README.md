@@ -26,7 +26,7 @@ Global shortcuts:
 
 ## Installation
 
-You can [download the latest release](https://github.com/Griphcode/Griphitor/releases) for your operating system or build it yourself (see below).
+You can [download the latest release](https://github.com/Griphcode/Griphitor-IDE/releases) for your operating system or build it yourself (see below).
 
 ## Building
 
@@ -34,8 +34,8 @@ You can [download the latest release](https://github.com/Griphcode/Griphitor/rel
 You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
 
 ```
-git clone https://github.com/Griphcode/Griphitor
-cd Griphitor
+git clone https://github.com/Griphcode/Griphitor-IDE
+cd Griphitor-IDE
 npm install
 ```
 
