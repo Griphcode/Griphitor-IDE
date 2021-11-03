@@ -67,7 +67,7 @@ Linux:
 npm run dist-linux
 ```
 
-#Credits:
+## Credits:
 
 Logo made using: https://logomakr.com/
 Created your free logo at LogoMakr.com
