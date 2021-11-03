@@ -69,8 +69,7 @@ npm run dist-linux
 
 ## Credits:
 
-Logo made using: https://logomakr.com/
-Created your free logo at LogoMakr.com
+Created my free logo at https://LogoMakr.com
 
 ide - oxmc & Griphcode
 
