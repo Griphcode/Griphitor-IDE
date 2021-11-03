@@ -2,13 +2,15 @@
 
 **The official desktop application for Griphitor built with electron.**
 
-![Screenshot of Griphitor](https://user-images.githubusercontent.com/67136658/139075782-2fe21eac-fa5e-44a8-9c1f-4be9f249d7aa.png)
+![Screenshot-of-Griphitor](https://user-images.githubusercontent.com/67136658/140071180-0562815b-b175-4da6-8d00-c26c727a81e8.png)
+
+![Run-Code-View](https://user-images.githubusercontent.com/67136658/140071433-e03762c1-39af-4dcb-8e2c-85f02d7ac518.png)
 
 ## Features
 
 Fast load times,
 
-Export as .zip, .json, or individual files
+Export as .zip, or single file
 
 Global shortcuts:
 
@@ -19,7 +21,7 @@ Global shortcuts:
 
 ## Todo
 
-- [ ] Add code highlight.
+- [X] Add code highlight.
 - [ ] Add ability to open files to edit.
 - [ ] Better UI.
 - [ ] Run code without errors.
