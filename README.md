@@ -66,3 +66,12 @@ npm run dist-mac
 Linux:
 npm run dist-linux
 ```
+
+#Credits:
+
+Logo made using: https://logomakr.com/
+Created your free logo at LogoMakr.com
+
+ide - oxmc & Griphcode
+
+app - oxmc
