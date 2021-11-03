@@ -2,8 +2,10 @@
 
 **The official desktop application for Griphitor built with electron.**
 
+Preview of main window
 ![Screenshot-of-Griphitor](https://user-images.githubusercontent.com/67136658/140071180-0562815b-b175-4da6-8d00-c26c727a81e8.png)
 
+Preview of run code button
 ![Run-Code-View](https://user-images.githubusercontent.com/67136658/140071433-e03762c1-39af-4dcb-8e2c-85f02d7ac518.png)
 
 ## Features
