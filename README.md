@@ -44,11 +44,23 @@ npm install
 #### Test app:
 
 ```
-npm start
+npm run start
 ```
 
 #### Build app:
 
 ```
-npm run dist
+Run first:
+npm run pack
+
+Run the one for your OS:
+
+Windows:
+npm run dist-win
+
+Mac:
+npm run dist-mac
+
+Linux:
+npm run dist-linux
 ```
