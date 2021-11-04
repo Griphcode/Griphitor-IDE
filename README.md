@@ -26,7 +26,8 @@ Global shortcuts:
 - [X] Add code highlight.
 - [ ] Add ability to open files to edit.
 - [ ] Better UI.
-- [ ] Run code without errors.
+- [X] Cross-platform
+- [X] Run code without errors.
 
 ## Installation
 
