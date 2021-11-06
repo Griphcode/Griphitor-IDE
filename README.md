@@ -27,7 +27,7 @@ Global shortcuts:
 - [ ] Add ability to open files to edit.
 - [ ] Better UI.
 - [X] Cross-platform
-- [X] Run code without errors.
+- [] Run code without errors.
 
 ## Installation
 
