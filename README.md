@@ -1,4 +1,9 @@
-# Griphitor Desktop
+# Griphitor Desktop 
+
+---
+[![CodeQL](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/codeql-analysis.yml)
+
+---
 
 **The official desktop application for Griphitor built with electron.**
 
