@@ -27,7 +27,7 @@ Global shortcuts:
 - [ ] Add ability to open files to edit.
 - [ ] Better UI.
 - [X] Cross-platform
-- [] Run code without errors.
+- [X] Run code without errors.
 
 ## Installation
 
@@ -70,7 +70,6 @@ npm run dist-linux
 
 ## Credits:
 
-Created my free logo at https://LogoMakr.com
 
 ide - oxmc & Griphcode
 
