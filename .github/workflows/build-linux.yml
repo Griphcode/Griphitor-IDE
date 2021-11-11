@@ -28,4 +28,4 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run pack
-    - run: npm run build-linux
+    - run: npm run dist-linux
