@@ -29,7 +29,8 @@ Global shortcuts:
 ## Todo
 
 - [X] Add code highlight.
-- [ ] Add ability to open files to edit.
+- [X] Add ability to open files to edit.
+- [X] Add terminal.
 - [ ] Better UI.
 - [X] Cross-platform
 - [] Run code without errors.
