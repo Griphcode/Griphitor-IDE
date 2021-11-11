@@ -9,7 +9,8 @@
     "dist-mac": "electron-builder --prepackaged=dist/mac-unpacked",
     "dist-win": "electron-builder --prepackaged=dist/win-unpacked",
     "dist-linux": "electron-builder --prepackaged=dist/linux-unpacked",
-    "rebuild": "electron-rebuild"
+    "rebuild": "electron-rebuild",
+    "build-all": "electron-builder -mwl"
   },
   "repository": {
     "type": "git",
