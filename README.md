@@ -1,8 +1,11 @@
-# Griphitor Desktop
+# Griphitor Desktop 
+
+---
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)   [![CodeQL](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/codeql-analysis.yml)  [![Node.js CI](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/node.js.yml)
+
+---
 
 **The official desktop application for Griphitor built with electron.**
-
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)   [![CodeQL](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/codeql-analysis.yml)  [![Node.js CI](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/node.js.yml)
 
 Preview of main window
 ![Screenshot-of-Griphitor](https://user-images.githubusercontent.com/67136658/140071180-0562815b-b175-4da6-8d00-c26c727a81e8.png)
@@ -26,16 +29,17 @@ Global shortcuts:
 ## Todo
 
 - [X] Add code highlight.
-- [X] Add ability to open files to edit.
+- [ ] Add ability to open files to edit.
 - [ ] Better UI.
 - [X] Cross-platform
-- [ ] Run code without errors.
+- [] Run code without errors.
 
 ## Installation
 
 You can [download the latest release](https://github.com/Griphcode/Griphitor-IDE/releases) for your operating system or build it yourself (see below).
 
 ## Building
+
 
 You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
 
@@ -71,6 +75,7 @@ npm run dist-linux
 
 ## Credits:
 
+Created my free logo at https://LogoMakr.com
 
 ide - oxmc & Griphcode
 
