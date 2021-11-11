@@ -8,7 +8,8 @@
     "pack": "electron-builder --dir",
     "dist-mac": "electron-builder --prepackaged=dist/mac-unpacked",
     "dist-win": "electron-builder --prepackaged=dist/win-unpacked",
-    "dist-linux": "electron-builder --prepackaged=dist/linux-unpacked"
+    "dist-linux": "electron-builder --prepackaged=dist/linux-unpacked",
+    "rebuild": "electron-rebuild"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "electron-builder": "^22.11.7",
-    "electron": "^15.3.0"
+    "electron": "^15.3.0",
+    "electron-builder": "^22.13.1",
+    "electron-rebuild": "^3.2.5"
   },
   "dependencies": {
     "decompress": "^4.2.1",
@@ -35,11 +37,16 @@
     "https": "^1.0.0",
     "minify": "^8.0.3",
     "node-notifier": "^10.0.0",
+    "node-pty": "^0.10.1",
     "os": "^0.1.2",
     "path": "^0.12.7",
     "request": "^2.88.2",
     "rimraf": "^3.0.2",
-    "v8-compile-cache": "^2.3.0"
+    "v8-compile-cache": "^2.3.0",
+    "xterm": "^4.15.0",
+    "xterm-addon-fit": "^0.5.0",
+    "xterm-addon-search": "^0.8.1",
+    "xterm-addon-web-links": "^0.4.0"
   },
   "build": {
     "appId": "com.oxmc.github.GriphitorDesktop",
@@ -55,6 +62,10 @@
       ],
       "icon": "src/renderer/assets/app.png",
       "category": "Network"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/renderer/assets/app.png"
     },
     "protocols": [
       {

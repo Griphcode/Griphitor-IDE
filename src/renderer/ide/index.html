@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- META -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Style -->
     <link rel="stylesheet" href="./assets/internal/css/style.css" />
-	  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-	  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
-	 crossorigin='anonymous'>
+    <link rel="stylesheet" href="./assets/internal/css/style2.css" />
+	  <link rel='stylesheet' href="./assets/lib/fa-4.7.0-min.css" />
+    <link rel='stylesheet' href="./assets/lib/fa-5.7.0-all.css" />
+    <!-- Custom Functions -->
     <script src="./assets/internal/js/functions.js"></script>
+    <!-- Syntax Highlighting -->
+    <script src="./assets/internal/js/codemirror.js"></script>
+    <script src="./assets/internal/js/xml.js"></script>
+    <script src="./assets/internal/js/javascript.js"></script>
+    <script src="./assets/internal/js/css.js"></script>
+    <script src="./assets/internal/js/htmlmixed.js"></script>
+    <script src="./assets/internal/js/active-line.js"></script>
+    <link rel="stylesheet" href="./assets/internal/css/00-codemirror.css">
+    <link rel="stylesheet" href="./assets/internal/css/monokai.css">
+    <!-- Terminal -->
+    <link rel="stylesheet" href="./assets/internal/css/xterm.css" />
+    <script src="./assets/internal/js/xterm.js"></script>
+    <!-- Title -->
     <title>Griphitor</title>
     <!-- Loading animation -->
     <link rel='stylesheet' href='./assets/internal/css/loading.css' type='text/css'>
@@ -19,7 +35,8 @@
     </div>
     <script src="./assets/internal/js/loading.js"></script>
   </head>
-  <body id="body" style="margin:0; overflow-x: hidden;" class="dark">
+  <!-- Body -->
+  <body id="body" style="margin:0; overflow-x: hide;" class="dark">
     <ul class="navbar">
       <li><a class="active" id="RunCodeBtn">Run <i class="fa fa-play"></i></a></li>
       <li><a id="ExprtBtn" class="ExprtBtn">Export <i class="fa fa-file-export"></i></a></li>
@@ -30,27 +47,31 @@
       <strong><h3 id="NotifTitle" class="text-left"></h3></strong>
       <p id="NotifMessage" class="text-left"></p>
       <div id="NotifCheckbox" style="display: none;">
-        <p>Export as individual files</p><input type="radio" name="ExportOption" id="NotifCheckbox1" checked>
+        <p>Export as file</p><input type="radio" name="ExportOption" id="NotifCheckbox1" checked>
         <p>Export as zip</p><input type="radio" name="ExportOption" id="NotifCheckbox2">
-        <p>Export as json</p><input type="radio" name="ExportOption" id="NotifCheckbox3">
         <br>
         <button id="ExprtBtn1" class="ExprtBtn">Export</button>
       </div>
     </div>
-    <br>
-    <div>
-      <textarea id="html" placeholder="HTML" class="dark" style="overflow-x: auto;"></textarea>
-      <textarea id="css" placeholder="CSS" class="dark" style="overflow-x: auto;"></textarea>
-      <textarea id="js" placeholder="JavaScript" class="dark" style="overflow-x: auto;"></textarea>
-      <div class="codenotif">
-        <p>Your code will be shown in a new window once you click the run button</p>
-      </div>
-      <script type="text/javascript" src="./assets/internal/js/app.js"></script>
+    <div class="codenotif text-center">
+      <p>Your code will be shown in a new window once you click the run button</p>
     </div>
+    <div class="editor">
+      <textarea id="editor"></textarea>
+    </div>
+    <div class="term">
+      <p>Terminal <i class="fa fa-terminal"></i></p>
+    </div>
+    <!-- Terminal -->
+    <div id="terminal-container">
+      <div id="terminal"></div>
+    </div>
+    <script src="./assets/internal/js/terminal.js"></script>
+    <!-- HIDDEN INPUT FILE -->
+    <input type="file" id="file-open-input" accept=".html,.htm,.txt" class="hide">
+    <script type="text/javascript" src="./assets/internal/js/app.js"></script>
   </body>
   <script src="./assets/lib/jquery-3.4.1.min.js"></script>
   <script src="./assets/lib/FileSaver.js"></script>
   <script src="./assets/lib/jszip.min.js"></script>
-  <!-- Embed script to capture keystrokes
-  <script src="./assets/internal/js/embed.js"></script>-->
 </html>

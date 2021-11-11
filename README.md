@@ -24,17 +24,16 @@ Global shortcuts:
 ## Todo
 
 - [X] Add code highlight.
-- [ ] Add ability to open files to edit.
+- [X] Add ability to open files to edit.
 - [ ] Better UI.
 - [X] Cross-platform
-- [X] Run code without errors.
+- [] Run code without errors.
 
 ## Installation
 
 You can [download the latest release](https://github.com/Griphcode/Griphitor-IDE/releases) for your operating system or build it yourself (see below).
 
 ## Building
-
 
 You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
 
