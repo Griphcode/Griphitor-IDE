@@ -2,6 +2,8 @@
 
 **The official desktop application for Griphitor built with electron.**
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)   [![CodeQL](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/codeql-analysis.yml)  [![Node.js CI](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Advik-B/Griphitor-IDE/actions/workflows/node.js.yml)
+
 Preview of main window
 ![Screenshot-of-Griphitor](https://user-images.githubusercontent.com/67136658/140071180-0562815b-b175-4da6-8d00-c26c727a81e8.png)
 
