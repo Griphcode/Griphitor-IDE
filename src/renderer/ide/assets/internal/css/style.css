@@ -1,8 +1,16 @@
 body {
-  text-align: center;
+  font-family: Courier, sans-serif;
+  font-size: 14px;
+  margin:0;
+  overflow-x: hidden;
+  min-height: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  color: #999;
+  background-color: #272822;
 }
 
-textarea {
+/*textarea {
   width: 32%;
   float: top;
   min-height: 250px;
@@ -14,7 +22,8 @@ textarea {
   font-family: Courier, sans-serif;
   font-size: 14px;
   resize: none;
-}
+  overflow-x: hidden;
+}*/
 
 .nexttotextarea {
   display: inline-block;
@@ -43,7 +52,7 @@ iframe {
 }
 
 /*Switch*/
-.switch {
+/*.switch {
     align-self: flex-end;
     margin: 0.9375rem;
 }
@@ -57,7 +66,7 @@ iframe {
     font-size: 1rem;
     padding: 0.1875rem;
     margin-left: 0.3125rem;
-}
+}*/
 
 .switch2 {
   position: relative;
@@ -74,7 +83,7 @@ iframe {
 }
 
 /* The slider */
-.slider {
+/*.slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -110,16 +119,16 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
+}*/
 
 /* Rounded sliders */
-.slider.round {
+/*.slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
   border-radius: 50%;
-}
+}*/
 
 /*Animations*/
 @-webkit-keyframes fadeIn {
@@ -193,7 +202,7 @@ input:checked + .slider:before {
   background-color: #f44336;
   color: white;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -201,7 +210,13 @@ input:checked + .slider:before {
 }
 
 .codenotif {
-  padding: 20px;
+  padding: 4px;
+  background-color: #833333;
+  color: white;
+}
+
+.term {
+  padding: 2px;
   background-color: #833333;
   color: white;
 }
