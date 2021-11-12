@@ -53,7 +53,7 @@
     "appId": "com.oxmc.github.GriphitorDesktop",
     "productName": "Griphitor Desktop",
     "mac": {
-      "icon": "src/renderer/assets/app.icns",
+      "icon": "build/app.icns",
       "category": "Network"
     },
     "linux": {
@@ -61,12 +61,12 @@
         "appimage",
         "deb"
       ],
-      "icon": "src/renderer/assets/app.png",
+      "icon": "build/app.png",
       "category": "Network"
     },
     "win": {
       "target": "nsis",
-      "icon": "src/renderer/assets/app.png"
+      "icon": "build/app.ico"
     },
     "protocols": [
       {
