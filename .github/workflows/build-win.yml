@@ -4,7 +4,7 @@
 name: Build-latest-windows
 
 env:
-  GITHUB_TOKEN: ${{ secret.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 }}
+  GITHUB_TOKEN: ${{ secret.ght }}
 
 on:
   push:
@@ -46,7 +46,7 @@ jobs:
     - name: upload windows artifact
     uses: actions/upload-release-asset@v1
     env:
-      GITHUB_TOKEN: ${{ secret.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 }}
+      GITHUB_TOKEN: ${{ secret.ght }}
     with:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
       asset_path: "dist/Griphitor Desktop Setup *.*.*.exe"
