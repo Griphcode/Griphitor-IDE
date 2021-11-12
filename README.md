@@ -1,9 +1,6 @@
-# Griphitor Desktop 
+# Griphitor Desktop
 
----
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)   [![CodeQL](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml)  [![Node.js CI](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml)
-
----
 
 **The official desktop application for Griphitor built with electron.**
 
@@ -19,28 +16,31 @@ Fast load times,
 
 Export as .zip, or single file
 
+Pre-included libraries: <a href="https://github.com/Griphcode/Griphitor-IDE/wiki/List-of-pre-included-libraries">List here</a>
+
 Global shortcuts:
 
 | Shortcut               | Use                           |
 | ---------------------- | ----------------------------- |
 | `Ctrl/⌘` + `Alt` + `A` | Show about menu               |
 | `Ctrl/⌘` + `Alt` + `i` | Show devtools                 |
+| `Ctrl/⌘` + `Alt` + `l` | Show included libraries                 |
 
 ## Todo
 
-- [X] Add code highlight.
-- [X] Add ability to open files to edit.
-- [X] Add terminal.
-- [ ] Better UI.
+- [X] Add syntax highlight
+- [X] Add ability to open files to edit
+- [X] Add terminal
+- [ ] Better UI
 - [X] Cross-platform
-- [] Run code without errors.
+- [X] include libaries out of the box
+- [ ] Run code without errors
 
 ## Installation
 
 You can [download the latest release](https://github.com/Griphcode/Griphitor-IDE/releases) for your operating system or build it yourself (see below).
 
 ## Building
-
 
 You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
 
@@ -81,3 +81,5 @@ Created my free logo at https://LogoMakr.com
 ide - oxmc & Griphcode
 
 app - oxmc
+
+security.md - Advik-B
