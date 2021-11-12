@@ -3,6 +3,9 @@
 
 name: Build-latest-windows
 
+env:
+  GITHUB_TOKEN: ${{ secret.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 }}
+
 on:
   push:
     branches: [ main ]
@@ -31,7 +34,21 @@ jobs:
     - run: npm run rebuild
     - run: npm run pack
     - run: npm run dist-win
-    - uses: actions/upload-artifact@v2
+    - name: release
+    - uses: actions/create-release@v1
+      id: create_release
       with:
-        name: my-artifact
-        path: "dist/Griphitor Desktop Setup *.*.*.exe"
+        draft: false
+        prerelease: false
+        release_name: ${{ steps.version.outputs.version }}
+        tag_name: ${{ github.ref }}
+        body_path: CHANGELOG.md
+    - name: upload windows artifact
+    uses: actions/upload-release-asset@v1
+    env:
+      GITHUB_TOKEN: ${{ secret.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 }}
+    with:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+      asset_path: "dist/Griphitor Desktop Setup *.*.*.exe"
+      asset_name: GriphitorDesktopSetup-latest.exe
+      asset_content_type: application/exe
