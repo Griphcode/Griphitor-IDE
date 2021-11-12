@@ -1,5 +1,8 @@
 # Griphitor Desktop
 
+<img src="https://cdn.discordapp.com/attachments/894176496372047872/908841107113267200/Untitled_59.png" width="128"/>
+
+
 [![CodeQL](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml)  <!--[![Node.js CI](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml)-->
 
 **The official desktop application for Griphitor built with electron.**
