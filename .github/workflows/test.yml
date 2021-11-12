@@ -30,4 +30,4 @@ jobs:
     - run: npm install
     - run: npm run rebuild
     - run: npm run pack
-    - run: npm run build --if-present
+    - run: npm run dist-linux
