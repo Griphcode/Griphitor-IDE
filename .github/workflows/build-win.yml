@@ -31,3 +31,7 @@ jobs:
     - run: npm run rebuild
     - run: npm run pack
     - run: npm run dist-win
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: "dist/Griphitor Desktop Setup *.*.*.exe"
