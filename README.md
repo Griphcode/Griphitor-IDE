@@ -5,10 +5,12 @@
 **The official desktop application for Griphitor built with electron.**
 
 Preview of main window
-![Screenshot-of-Griphitor](https://user-images.githubusercontent.com/67136658/140071180-0562815b-b175-4da6-8d00-c26c727a81e8.png)
+![Screenshot-of-Griphitor](https://user-images.githubusercontent.com/67136658/141463679-b6586b80-788b-4c36-88bc-fed61ce1d184.png)
+
 
 Preview of run code button
-![Run-Code-View](https://user-images.githubusercontent.com/67136658/140071433-e03762c1-39af-4dcb-8e2c-85f02d7ac518.png)
+![Run-Code-View](https://user-images.githubusercontent.com/67136658/141463620-5a7672a6-2408-4c59-8d76-ba37fed49e7d.png)
+
 
 ## Features
 
