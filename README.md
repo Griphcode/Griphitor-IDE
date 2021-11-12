@@ -38,7 +38,7 @@ Global shortcuts:
 
 ## Installation
 
-You can [download the latest release](https://github.com/Griphcode/Griphitor-IDE/releases) for your operating system or build it yourself (see below).
+You can [download the latest release](https://github.com/Griphcode/Griphitor-IDE/releases/tag/latest) for your operating system or build it yourself (see below).
 
 ## Building
 
