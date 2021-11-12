@@ -1,6 +1,6 @@
 # Griphitor Desktop
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)   [![CodeQL](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml)  <!--[![Node.js CI](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml)-->
+[![CodeQL](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml)  <!--[![Node.js CI](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml)-->
 
 **The official desktop application for Griphitor built with electron.**
 
@@ -78,7 +78,7 @@ npm run dist-linux
 
 ## Credits:
 
-Created my free logo at https://LogoMakr.com
+Logo by [@Givinghawk](https://twitter.com/givinghawk) Follow on Twitter
 
 ide - oxmc & Griphcode
 
