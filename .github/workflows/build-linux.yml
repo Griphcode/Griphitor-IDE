@@ -3,6 +3,9 @@
 
 name: Build-latest-linux
 
+env:
+  GITHUB_TOKEN: ${{ secret.ght }}
+
 on:
   push:
     branches: [ main ]
@@ -31,3 +34,21 @@ jobs:
     - run: npm run rebuild
     - run: npm run pack
     - run: npm run dist-linux
+    - name: release
+    - uses: actions/create-release@v1
+      id: create_release
+      with:
+        draft: false
+        prerelease: false
+        release_name: ${{ steps.version.outputs.version }}
+        tag_name: ${{ github.ref }}
+        body_path: CHANGELOG.md
+    - name: upload linux artifact
+    uses: actions/upload-release-asset@v1
+    env:
+      GITHUB_TOKEN: ${{ secret.ght }}
+    with:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+      asset_path: "dist/Griphitor Desktop *.*.*.appimage"
+      asset_name: GriphitorDesktop-latest.appimage
+      asset_content_type: application/appimage
