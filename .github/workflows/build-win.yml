@@ -5,8 +5,8 @@
 
 name: Build-latest-windows
 
-env:
-  GITHUB_TOKEN: ${{ secret.ght }}
+#env:
+#  GITHUB_TOKEN: ${{ secret.ght }}
 
 on:
   push:
