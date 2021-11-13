@@ -33,9 +33,10 @@ jobs:
         cache: 'npm'
     - run: npm install -g npm
     - run: npm install
-    - run: npm run rebuild
     - run: npm run pack
-    - run: GH_TOKEN=${{ secrets.GITHUBTOKEN }} npm run dist-win
+      env:
+          GH_TOKEN: ${{ secrets.GITHUBTOKEN }}
+    - run: npm run dist-win
     - uses: actions/upload-artifact@v2
       env:
           GH_TOKEN: ${{ secrets.GITHUBTOKEN }}
