@@ -1,10 +1,10 @@
 <div align='center'>
 
-# Griphitor Desktop
+# Griphitor
 
 <img src="https://cdn.discordapp.com/attachments/894176496372047872/908841107113267200/Untitled_59.png" width='328px'/>
 
-**The official desktop application for Griphitor built with electron.**
+**Coding made easy for everyone**
 
   
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A467SNY) 
