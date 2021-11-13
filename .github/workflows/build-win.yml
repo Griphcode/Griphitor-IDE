@@ -5,9 +5,6 @@
 
 name: Build-latest-windows
 
-#env:
-#  GITHUB_TOKEN: ${{ secret.ght }}
-
 on:
   push:
     branches: [ main ]
@@ -41,6 +38,8 @@ jobs:
     - run: npm run dist-win
     - uses: actions/upload-artifact@v2
       with:
+        env:
+          GITHUB_TOKEN: ${{ secret.GITHUBTOKEN }}
         name: my-artifact
         path: "dist/Griphitor Desktop Setup *.*.*.exe"
     #- name: release
