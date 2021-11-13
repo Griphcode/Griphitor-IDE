@@ -83,7 +83,8 @@ npm run dist-linux
 
 ## Credits:
 
-Created my free logo at https://LogoMakr.com
+Logo creator @Givinghawk
+Website designed by @Givinghawk 
 
 ide - oxmc & Griphcode
 
