@@ -6,7 +6,8 @@
 
 **The official desktop application for Griphitor built with electron.**
 
-[![CodeQL](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml)
+  
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A467SNY) 
 
 <!--[![Node.js CI](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml)-->
 </div>
