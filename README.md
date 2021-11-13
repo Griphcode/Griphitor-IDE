@@ -84,6 +84,7 @@ npm run dist-linux
 ## Credits:
 
 Logo creator @Givinghawk
+
 Website designed by @Givinghawk 
 
 ide - oxmc & Griphcode
