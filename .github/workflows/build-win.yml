@@ -35,7 +35,7 @@ jobs:
     - run: npm install
     - run: npm run rebuild
     - run: npm run pack
-    - run: npm run dist-win
+    - run: GH_TOKEN=${{ secrets.GITHUBTOKEN }} npm run dist-win
     - uses: actions/upload-artifact@v2
       env:
           GH_TOKEN: ${{ secrets.GITHUBTOKEN }}
