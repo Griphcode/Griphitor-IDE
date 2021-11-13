@@ -34,21 +34,25 @@ jobs:
     - run: npm run rebuild
     - run: npm run pack
     - run: npm run dist-win
-    - name: release
-    - uses: actions/create-release@v1
-      id: create_release
+    - uses: actions/upload-artifact@v2
       with:
-        draft: false
-        prerelease: false
-        release_name: ${{ steps.version.outputs.version }}
-        tag_name: ${{ github.ref }}
-        body_path: CHANGELOG.md
-    - name: upload windows artifact
-    uses: actions/upload-release-asset@v1
-    env:
-      GITHUB_TOKEN: ${{ secret.ght }}
-    with:
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
-      asset_path: "dist/Griphitor Desktop Setup *.*.*.exe"
-      asset_name: GriphitorDesktopSetup-latest.exe
-      asset_content_type: application/exe
+        name: my-artifact
+        path: "dist/Griphitor Desktop Setup *.*.*.exe"
+    #- name: release
+    #- uses: actions/create-release@v1
+    #  id: create_release
+    #  with:
+    #    draft: false
+    #    prerelease: false
+    #    release_name: ${{ steps.version.outputs.version }}
+    #    tag_name: ${{ github.ref }}
+    #    body_path: CHANGELOG.md
+    #- name: upload windows artifact
+    #uses: actions/upload-release-asset@v1
+    #env:
+    #  GITHUB_TOKEN: ${{ secret.ght }}
+    #with:
+    #  upload_url: ${{ steps.create_release.outputs.upload_url }}
+    #  asset_path: "dist/Griphitor Desktop Setup *.*.*.exe"
+    #  asset_name: GriphitorDesktopSetup-latest.exe
+    #  asset_content_type: application/exe
