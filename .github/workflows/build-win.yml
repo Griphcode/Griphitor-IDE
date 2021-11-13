@@ -25,6 +25,10 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - name: Simple set environment variables
+      uses: trevorlloydelliott/set-environment-variables@v1.0.0
+      with:
+        GH_TOKEN: ${{ secrets.GITHUBTOKEN }}
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
