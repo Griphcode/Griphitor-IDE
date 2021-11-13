@@ -43,6 +43,7 @@ Global shortcuts:
 - [X] Cross-platform
 - [X] include libaries out of the box
 - [ ] Run code without errors
+- [ ] Customize Griphitor IDE
 
 ## Installation
 
