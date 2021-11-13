@@ -7,17 +7,13 @@
     <!-- Style -->
     <link rel="stylesheet" href="./assets/internal/css/style.css" />
     <link rel="stylesheet" href="./assets/internal/css/style2.css" />
-	  <link rel='stylesheet' href="./assets/lib/fa-4.7.0-min.css" />
-    <link rel='stylesheet' href="./assets/lib/fa-5.7.0-all.css" />
+    <link rel="stylesheet" href="./assets/internal/css/notification.css" />
+	  <link rel='stylesheet' href="./assets/lib/css/fa-4.7.0-min.css" />
+    <link rel='stylesheet' href="./assets/lib/css/fa-5.7.0-all.css" />
     <!-- Custom Functions -->
     <script src="./assets/internal/js/functions.js"></script>
     <!-- Syntax Highlighting -->
-    <script src="./assets/internal/js/codemirror.js"></script>
-    <script src="./assets/internal/js/xml.js"></script>
-    <script src="./assets/internal/js/javascript.js"></script>
-    <script src="./assets/internal/js/css.js"></script>
-    <script src="./assets/internal/js/htmlmixed.js"></script>
-    <script src="./assets/internal/js/active-line.js"></script>
+    <script src="./assets/internal/js/syntax.combined.js"></script>
     <link rel="stylesheet" href="./assets/internal/css/00-codemirror.css">
     <link rel="stylesheet" href="./assets/internal/css/monokai.css">
     <!-- Terminal -->
@@ -36,7 +32,7 @@
     <script src="./assets/internal/js/loading.js"></script>
   </head>
   <!-- Body -->
-  <body id="body" style="margin:0; overflow-x: hide;" class="dark">
+  <body id="body" style="margin:0; overflow-x: hide;" class="dark toast__container">
     <ul class="navbar">
       <li><a class="active" id="RunCodeBtn">Run <i class="fa fa-play"></i></a></li>
       <li><a id="ExprtBtn" class="ExprtBtn">Export <i class="fa fa-file-export"></i></a></li>
@@ -56,6 +52,11 @@
     <div class="codenotif text-center">
       <p>Your code will be shown in a new window once you click the run button</p>
     </div>
+    <div id="finddialog" class="finddialog" style="display: none;">
+      <input id="findtext" type="text">
+      <button id="findbtn">Find</button>
+      <button id="cancelfindbtn">Cancel</button>
+    </div>
     <div class="editor">
       <textarea id="editor"></textarea>
     </div>
@@ -71,7 +72,7 @@
     <input type="file" id="file-open-input" accept=".html,.htm,.txt" class="hide">
     <script type="text/javascript" src="./assets/internal/js/app.js"></script>
   </body>
-  <script src="./assets/lib/jquery-3.4.1.min.js"></script>
-  <script src="./assets/lib/FileSaver.js"></script>
-  <script src="./assets/lib/jszip.min.js"></script>
+  <script src="./assets/lib/js/jquery-3.4.1.min.js"></script>
+  <script src="./assets/lib/js/FileSaver.js"></script>
+  <script src="./assets/lib/js/jszip.min.js"></script>
 </html>

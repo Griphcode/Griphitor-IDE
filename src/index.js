@@ -298,22 +298,9 @@ app.whenReady().then(async () => {
           mainWindow.show();
           SplashWindow.close();
           PageView.webContents.on('did-finish-load', () => {
-            PageView.webContents.executeJavaScript(fs.readFileSync(`${appdir}/src/renderer/preload-2.js`).toString(), true);
+            //PageView.webContents.executeJavaScript(fs.readFileSync(`${appdir}/src/renderer/preload-2.js`).toString(), true);
           })
           mainWindow.center();
-        }
-      })
-      ipcMain.on('Editor', function (event, arg) {
-        //console.log(arg);
-        if (arg == "ShowCode") {
-          const CodeWin  = new BrowserWindow({
-            title: "Your code",
-            webPreferences: {
-              nodeIntegration: true,
-              contextIsolation: false
-            },
-          });
-          CodeWin.webContents.loadFile(`${appdir}/src/renderer/ide/user-created.html`);
         }
       })
     } else {

@@ -1,23 +1,14 @@
-<div align='center'>
-  
 # Griphitor Desktop
-  
-<img src="https://cdn.discordapp.com/attachments/894176496372047872/908841107113267200/Untitled_59.png" width='328px'/>
-  
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)   [![CodeQL](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml)  [![Node.js CI](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml)
+
 **The official desktop application for Griphitor built with electron.**
-  
-[![CodeQL](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/codeql-analysis.yml)
-  
-<!--[![Node.js CI](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml/badge.svg)](https://github.com/Griphcode/Griphitor-IDE/actions/workflows/node.js.yml)-->
-</div>
 
 Preview of main window
-![Screenshot-of-Griphitor](https://user-images.githubusercontent.com/67136658/141463679-b6586b80-788b-4c36-88bc-fed61ce1d184.png)
-
+![Screenshot-of-Griphitor](https://user-images.githubusercontent.com/67136658/140071180-0562815b-b175-4da6-8d00-c26c727a81e8.png)
 
 Preview of run code button
-![Run-Code-View](https://user-images.githubusercontent.com/67136658/141463620-5a7672a6-2408-4c59-8d76-ba37fed49e7d.png)
-
+![Run-Code-View](https://user-images.githubusercontent.com/67136658/140071433-e03762c1-39af-4dcb-8e2c-85f02d7ac518.png)
 
 ## Features
 
@@ -47,7 +38,7 @@ Global shortcuts:
 
 ## Installation
 
-You can [download the latest release](https://github.com/Griphcode/Griphitor-IDE/releases/tag/latest) for your operating system or build it yourself (see below).
+You can [download the latest release](https://github.com/Griphcode/Griphitor-IDE/releases) for your operating system or build it yourself (see below).
 
 ## Building
 
@@ -85,7 +76,7 @@ npm run dist-linux
 
 ## Credits:
 
-Logo by [@Givinghawk](https://twitter.com/givinghawk) Follow on Twitter
+Created my free logo at https://LogoMakr.com
 
 ide - oxmc & Griphcode
 

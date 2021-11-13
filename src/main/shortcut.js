@@ -1,5 +1,5 @@
 /* Handle global keyboard shortcuts */
-const { globalShortcut, app } = require("electron");
+const { globalShortcut, app, BrowserWindow } = require("electron");
 
 app.on("ready", () => {
   globalShortcut.register("CommandOrControl+Alt+A", () => {
@@ -9,9 +9,6 @@ app.on("ready", () => {
     global.PageView.webContents.toggleDevTools();
   });
   globalShortcut.register("CommandOrControl+Alt+R", () => {
-    global.PageView.reload();
-  });
-  globalShortcut.register("CommandOrControl+Alt+Space", () => {
     global.PageView.reload();
   });
 });
