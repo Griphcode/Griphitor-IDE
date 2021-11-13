@@ -38,7 +38,7 @@ jobs:
     - run: npm run dist-win
     - uses: actions/upload-artifact@v2
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUBTOKEN }}
       with:
         name: my-artifact
         path: "dist/Griphitor Desktop Setup *.*.*.exe"
