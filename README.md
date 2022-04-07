@@ -2,6 +2,8 @@
 
 # Griphitor
 
+# Griphitor has been moved too [Griphitor](https://github.com/Griphitor/Griphitor)
+  
 <img src="https://cdn.discordapp.com/attachments/894176496372047872/908841107113267200/Untitled_59.png" width='328px'/>
 
 **Coding made easy for everyone**
